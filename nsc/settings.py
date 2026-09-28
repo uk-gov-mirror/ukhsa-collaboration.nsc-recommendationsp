@@ -652,9 +652,10 @@ class Deployed(Build):
 
     # Some deployed settings are no longer env vars - collect from the secret store
     SECRET_KEY = get_secret("django", "secret-key")
-    DATABASE_USER = get_secret("postgresql", "database-user")
-    DATABASE_PASSWORD = get_secret("postgresql", "database-password")
-    DATABASE_NAME = get_secret("postgresql", "database-name")
+    DATABASE_HOST = get_secret("database-app", "host")
+    DATABASE_USER = get_secret("database-app", "username")
+    DATABASE_PASSWORD = get_secret("database-app", "password")
+    DATABASE_NAME = get_secret("database-app", "dbname")
 
     # Change default cache
     REDIS_HOST = get_env("REDIS_SERVICE_HOST", required=True)

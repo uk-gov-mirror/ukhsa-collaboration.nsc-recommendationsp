@@ -278,8 +278,8 @@ objects:
             - name: secret-azure-ad
               mountPath: "/run/secrets/azure-ad"
               readOnly: true
-            - name: secret-psql
-              mountPath: "/run/secrets/postgresql"
+            - name: secret-db-app
+              mountPath: "/run/secrets/database-app"
               readOnly: true
             - name: secret-s3
               mountPath: "/run/secrets/s3"
@@ -303,9 +303,9 @@ objects:
           - name: secret-azure-ad
             secret:
               secretName: azure-ad
-          - name: secret-psql
+          - name: secret-db-app
             secret:
-              secretName: postgresql
+              secretName: database-app
           - name: secret-s3
             secret:
               secretName: s3
@@ -405,8 +405,8 @@ objects:
             - name: secret-azure-ad
               mountPath: "/run/secrets/azure-ad"
               readOnly: true
-            - name: secret-psql
-              mountPath: "/run/secrets/postgresql"
+            - name: secret-db-app
+              mountPath: "/run/secrets/database-app"
               readOnly: true
             - name: secret-s3
               mountPath: "/run/secrets/s3"
@@ -430,9 +430,9 @@ objects:
           - name: secret-azure-ad
             secret:
               secretName: azure-ad
-          - name: secret-psql
+          - name: secret-db-app
             secret:
-              secretName: postgresql
+              secretName: database-app
           - name: secret-s3
             secret:
               secretName: s3
@@ -520,8 +520,8 @@ objects:
             - name: secret-azure-ad
               mountPath: "/run/secrets/azure-ad"
               readOnly: true
-            - name: secret-psql
-              mountPath: "/run/secrets/postgresql"
+            - name: secret-db-app
+              mountPath: "/run/secrets/database-app"
               readOnly: true
             - name: secret-s3
               mountPath: "/run/secrets/s3"
@@ -545,9 +545,9 @@ objects:
           - name: secret-azure-ad
             secret:
               secretName: azure-ad
-          - name: secret-psql
+          - name: secret-db-app
             secret:
-              secretName: postgresql
+              secretName: database-app
           - name: secret-s3
             secret:
               secretName: s3
